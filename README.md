@@ -13,6 +13,8 @@
 
 ## Collapse
 
+[![Build status](https://ci.appveyor.com/api/projects/status/yksou6hhukdo2xgk/branch/main?svg=true)](https://ci.appveyor.com/project/Malins062/ahjs-anim/branch/main)
+
 ### Легенда
 
 В рамках реализации большого портала вам необходимо сделать виджет "collapsible"-контейнеров, который может разворачиваться и сворачиваться.
