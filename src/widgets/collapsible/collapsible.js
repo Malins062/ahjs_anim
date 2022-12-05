@@ -1,29 +1,18 @@
 import './collapsible.css';
 
-/*
-class CollapsibleWidget
+const CLASS_NAME = 'collapsible';
+const PREFIX = 'csbl';
 
-  Параметры конструктора:
-    parentEl - контейнер, в котором искать объекты collapsible
-*/
+const clsblObjects = document.querySelectorAll(`[data-${PREFIX}-toggle=${CLASS_NAME}]`);
 
-const CLASS_NAME = 'collapsible',
-  PREFIX = 'csbl'
-
-export default class CollapsibleWidget {
-  constructor(parentEl) {
-    this.parentEl = parentEl;
+clsblObjects.forEach(element => {
+  const id = element.getAttribute(`data-${PREFIX}-target`);
+  const clsblObject = document.querySelector(`.${CLASS_NAME}${id}`);
+  if (!clsblObject) {
+    return;
   }
+  element.addEventListener('click', () => {
+    clsblObject.classList.toggle('show');
+  });
+});
 
-  static get idSelector() {
-    return `[data-${PREFIX}-toggle=${CLASS_NAME}]`;
-  }
-
-  static get classSelector() {
-    return `.${CLASS_NAME}`;
-  }
-
-  listen() {
-    return this.parentEl;
-  }
-}
