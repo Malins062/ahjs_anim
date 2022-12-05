@@ -1,1 +1,1 @@
-import CollapsibleWidget from '../widgets/collapsible/collapsible';
+import '../widgets/collapsible/collapsible';

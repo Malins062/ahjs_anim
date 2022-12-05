@@ -5,7 +5,7 @@ const PREFIX = 'csbl';
 
 const clsblObjects = document.querySelectorAll(`[data-${PREFIX}-toggle=${CLASS_NAME}]`);
 
-clsblObjects.forEach(element => {
+clsblObjects.forEach((element) => {
   const id = element.getAttribute(`data-${PREFIX}-target`);
   const clsblObject = document.querySelector(`.${CLASS_NAME}${id}`);
   if (!clsblObject) {
@@ -15,4 +15,3 @@ clsblObjects.forEach(element => {
     clsblObject.classList.toggle('show');
   });
 });
-
